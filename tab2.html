@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>탭브라우징, 탭컨텐츠 - 접근성 무시</title>
+    <link rel="stylesheet" href="css/tab2.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/tab_noneAria.js"></script>
+</head>
+
+<body>
+    <div id="infraTab">
+        <!-- 탭 버튼 그룹 -->
+        <ul class="tablist">
+            <li>
+                <button type="button">태양광 패널 점검</button>
+                <!-- <a href="" role="button">태양광 패널 점검</a> 만약 a태그로 쓸 경우 페이지 이동이 아닌 클릭 기능만을 부여하기 위해 role="button"을 추가함 -->
+            </li>
+            <li>
+                <button type="button">해상 인프라 점검</button>
+            </li>
+            <li>
+                <button type="button">교량 점검</button>
+            </li>
+            <li>
+                <button type="button">교통 모니터링</button>
+            </li>
+        </ul>
+        <!-- 탭 버튼을 클릭하면 보여지는 탭패널(상세내용) -->
+        <div class="tabpanel">
+            <img src="images/infra1.jpg" alt="...">
+        </div>
+        <div class="tabpanel">
+            <img src="images/infra2.jpg" alt="...">
+        </div>
+        <div class="tabpanel">
+            <img src="images/infra3.jpg" alt="...">
+        </div>
+        <div class="tabpanel">
+            <img src="images/infra4.jpg" alt="...">
+        </div>
+    </div>
+</body>
+
+</html>
