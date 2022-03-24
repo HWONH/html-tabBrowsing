@@ -1,0 +1,34 @@
+@charset "utf-8";
+@font-face{
+    font-family: NtSKR;
+    font-weight: 400;
+    font-style: normal;
+    src: url("../../../fonts/NotoSansKR-Regular.eot");
+    src: local("Noto Sans KR"),
+    url("../../../fonts/NotoSansKR-Regular.eot#iefix") format("embedded-opentype"),
+    url("../../../fonts/NotoSansKR-Regular.woff2") format("woff2"),
+    url("../../../fonts/NotoSansKR-Regular.woff") format("woff"),
+    url("../../../fonts/NotoSansKR-Regular.otf") format("opentype");
+}
+
+/* tag reset */
+body, ul{margin: 0;padding: 0;}
+ul{list-style: none;}
+img{vertical-align: top;}
+
+body{font-family: NtSKR;font-size: 16px;color: #555555;}
+
+/* tab */
+/* 1) 탭의 크기와 위치 지정  */
+#infraTab{width: 1200px;margin: 50px auto;}
+/* 3) .tablist에게 높이 지정하여 자식이 float 되어 생기는 문제 해결 */
+#infraTab .tablist{height: 70px;margin-bottom: 55px;}
+/* 2) .tablist .tab을 한줄로 위치시키기 */
+.tablist li{float: left;width: 25%;height: 70px;line-height: 68px;box-sizing: border-box;border: 1px solid #e1e1e1;text-align: center;}
+.tablist li + li{border-left: none;}
+/* 보여지는 것 제어 */
+/* 4) 탭 버튼에 hover, focus, 탭 버튼이 활성화된 경우라면(.active) - 스크립트에서 li에 tabindex 속성으로 포커스를 보낼 수 있게 처리 하였음*/
+.tablist li:hover, .tablist li:focus, .tablist li.active{background: #222222;color: #ffffff;cursor: pointer;}
+/* 5) 모든 탭 패널을 숨기고 .active 클래스명을 가질때만 보여지게 함 */
+.tabpanel{display: none;}
+.tabpanel.active{display: block;}
